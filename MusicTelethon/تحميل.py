@@ -12,6 +12,8 @@ from pyrogram.types import Message
 from youtubesearchpython import SearchVideos
 from yt_dlp import YoutubeDL
 from config import HNDLR
+from MusicTelethon.helpers.decorators import authorized_users_only
+
 @Client.on_message(filters.command(["تحميل", "تنزيل"], prefixes=f"{HNDLR}"))
 @authorized_users_only
 async def song(client, message: Message):
