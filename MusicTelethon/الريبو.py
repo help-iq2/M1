@@ -5,6 +5,8 @@ from time import time
 from pyrogram import Client, filters
 from pyrogram.types import Message
 from config import HNDLR, SUDO_USERS
+from MusicTelethon.helpers.decorators import authorized_users_only
+
 START_TIME = datetime.utcnow()
 TIME_DURATION_UNITS = (    ("Minggu", 60 * 60 * 24 * 7),    ("Hari", 60 * 60 * 24),    ("Jam", 60 * 60),    ("Menit", 60),    ("Detik", 1),)
 async def _human_time_duration(seconds):
