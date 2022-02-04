@@ -19,6 +19,8 @@ async def _human_time_duration(seconds):
 
 
 @Client.on_message(    filters.user(SUDO_USERS) & filters.command(["ريستارت"], prefixes=f"{HNDLR}"))
+@authorized_users_only
+
 async def restart(client, m: Message):
     await m.delete()
     loli = await m.reply("1")
@@ -34,6 +36,7 @@ async def restart(client, m: Message):
     os.execl(sys.executable, sys.executable, *sys.argv)
     quit()
 @Client.on_message(filters.command(["اوامر الاغاني"], prefixes=f"{HNDLR}"))
+@authorized_users_only
 async def help(client, m: Message):
     await m.delete()
     HELP = f"""
