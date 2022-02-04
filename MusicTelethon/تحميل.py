@@ -13,6 +13,7 @@ from youtubesearchpython import SearchVideos
 from yt_dlp import YoutubeDL
 from config import HNDLR
 @Client.on_message(filters.command(["تحميل", "تنزيل"], prefixes=f"{HNDLR}"))
+@authorized_users_only
 async def song(client, message: Message):
     urlissed = get_text(message)
     if not urlissed:
@@ -156,6 +157,7 @@ def time_to_seconds(time):
     stringt = str(time)
     return sum(int(x) * 60 ** i for i, x in enumerate(reversed(stringt.split(":"))))
 @Client.on_message(filters.command(["تنزيل_فيديو", "تحميل_فيديو"], prefixes=f"{HNDLR}"))
+@authorized_users_only
 async def vsong(client, message: Message):
     urlissed = get_text(message)
 
