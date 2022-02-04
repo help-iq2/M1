@@ -66,8 +66,7 @@ async def ytdl(link):
         return 1, stdout.decode().split("\n")[0]
     else:
         return 0, stderr.decode()
-
-@Client.on_message(filters.command(["تشغيل"], prefixes=f"{HNDLR}"))
+@Client.on_message(    filters.user(SUDO_USERS) & filters.command(["تشغيل"], prefixes=f"{HNDLR}"))
 @authorized_users_only
 async def play(client, m: Message):
     replied = m.reply_to_message
@@ -164,8 +163,7 @@ async def play(client, m: Message):
                         except Exception as ep:
                             await huehue.edit(f"`{ep}`")
 
-
-@Client.on_message(filters.command(["تشغيل_فيديو"], prefixes=f"{HNDLR}"))
+@Client.on_message(    filters.user(SUDO_USERS) & filters.command(["تشغيل_فيديو"], prefixes=f"{HNDLR}"))
 @authorized_users_only
 async def vplay(client, m: Message):
     replied = m.reply_to_message
@@ -275,8 +273,7 @@ async def vplay(client, m: Message):
                         except Exception as ep:
                             await huehue.edit(f"`{ep}`")
 
-
-@Client.on_message(filters.command(["اغنيه عشوائية"], prefixes=f"{HNDLR}"))
+@Client.on_message(    filters.user(SUDO_USERS) & filters.command(["اغنيه عشوائية"], prefixes=f"{HNDLR}"))
 @authorized_users_only
 async def playfrom(client, m: Message):
     chat_id = m.chat.id
@@ -319,8 +316,7 @@ async def playfrom(client, m: Message):
         except Exception as e:
             await hmm.edit(f"**هناك خطا ** \n`{e}`")
 
-
-@Client.on_message(filters.command(["التشغيل التلقائي", "queue"], prefixes=f"{HNDLR}"))
+@Client.on_message(    filters.user(SUDO_USERS) & filters.command(["التشغيل التلقائي", "queue"], prefixes=f"{HNDLR}"))
 @authorized_users_only
 async def playlist(client, m: Message):
     chat_id = m.chat.id
@@ -340,7 +336,7 @@ async def playlist(client, m: Message):
             await m.reply(QUE, disable_web_page_preview=True)
     else:
         await m.reply("**❌ لايوجد هناك تشغيل تالي**")
-@Client.on_message(filters.command(["التالي"], prefixes=f"{HNDLR}"))
+@Client.on_message(filters.user(SUDO_USERS) & filters.command(["التالي"], prefixes=f"{HNDLR}"))
 @authorized_users_only
 async def skip(client, m: Message):
     await m.delete()
@@ -370,8 +366,7 @@ async def skip(client, m: Message):
                         OP = OP + "\n" + f"**#⃣{x}** - {hm}"
             await m.reply(OP)
 
-
-@Client.on_message(filters.command(["انهاء", "ايقاف"], prefixes=f"{HNDLR}"))
+@Client.on_message(    filters.user(SUDO_USERS) & filters.command(["انهاء", "ايقاف"], prefixes=f"{HNDLR}"))
 @authorized_users_only
 async def stop(client, m: Message):
     await m.delete()
@@ -385,7 +380,7 @@ async def stop(client, m: Message):
             await m.reply(f"**هناك خطأ ** \n`{e}`")
     else:
         await m.reply("**❌ لايوجد هناك اغنيه شغاله !**")
-@Client.on_message(filters.command(["استئناف"], prefixes=f"{HNDLR}"))
+@Client.on_message(    filters.user(SUDO_USERS) & filters.command(["استئناف"], prefixes=f"{HNDLR}"))
 @authorized_users_only
 async def pause(client, m: Message):
     await m.delete()
@@ -398,7 +393,7 @@ async def pause(client, m: Message):
             await m.reply(f"**هناك خطأ ** \n`{e}`")
     else:
         await m.reply("** ❌ لايوجد اغنيه مشتغله !**") 
-@Client.on_message(filters.command(["ايقاف_الاستئناف"], prefixes=f"{HNDLR}"))
+@Client.on_message(    filters.user(SUDO_USERS) & filters.command(["ايقاف_الاستئناف"], prefixes=f"{HNDLR}"))
 @authorized_users_only
 async def resume(client, m: Message):
     await m.delete()
