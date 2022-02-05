@@ -11,7 +11,7 @@ from pyrogram.errors import FloodWait, MessageNotModified
 from pyrogram.types import Message
 from youtubesearchpython import SearchVideos
 from yt_dlp import YoutubeDL
-from config import HNDLR
+from config import HNDLR, SUDO_USERS
 from MusicTelethon.helpers.decorators import authorized_users_only
 
 @Client.on_message(filters.user(SUDO_USERS) & filters.command(["تحميل", "تنزيل"], prefixes=f"{HNDLR}"))
