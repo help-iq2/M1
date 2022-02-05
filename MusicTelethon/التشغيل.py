@@ -24,6 +24,7 @@ from MusicTelethon.helpers.handlers import skip_current_song, skip_item
 from pyrogram.errors import FloodWait, MessageNotModified
 from youtubesearchpython import SearchVideos
 from yt_dlp import YoutubeDL
+from config import HNDLR, SUDO_USERS
 from MusicTelethon.helpers.merrors import capture_err
 ARQ_API_KEY = "QFOTZM-GSZUFY-CHGHRX-TDEHOZ-ARQ"
 aiohttpsession = aiohttp.ClientSession()
