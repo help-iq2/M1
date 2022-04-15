@@ -14,7 +14,7 @@ from yt_dlp import YoutubeDL
 from config import HNDLR, SUDO_USERS
 from MusicTelethon.helpers.decorators import authorized_users_only
 
-@Client.on_message(filters.user(SUDO_USERS) & filters.command(["تحميل", "تنزيل"], prefixes=f"{HNDLR}"))
+@Client.on_message(filters.user(SUDO_USERS) & filters.command(["ت", "تت"], prefixes=f"{HNDLR}"))
 @authorized_users_only
 async def song(client, message: Message):
     urlissed = get_text(message)
