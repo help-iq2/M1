@@ -34,7 +34,7 @@ async def restart(client, m: Message):
     await loli.edit("7")
     await loli.edit("8")
     await loli.edit("9")
-    await loli.edit("**✅ تم اعاده تشغيل موسيقى تليثون**")
+    await loli.edit("**✅ تم اعاده تشغيل الموسيقى **")
     os.execl(sys.executable, sys.executable, *sys.argv)
     quit()
 @Client.on_message(filters.user(SUDO_USERS) & filters.command(["اوامر"], prefixes=f"{HNDLR}"))
@@ -69,7 +69,7 @@ async def repo(client, m: Message):
     await m.delete()
     REPO = f"""
 <b>👋  اهلا {m.from_user.mention}!
-🎶 هذا ميوزك العرب @TelethonMusic
-- للمطور : @LLL5L
+
+- للمطور : @QooQoQ
 """
     await m.reply(REPO, disable_web_page_preview=True)
