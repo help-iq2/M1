@@ -34,7 +34,7 @@ async def restart(client, m: Message):
     await loli.edit("7")
     await loli.edit("8")
     await loli.edit("9")
-    await loli.edit("**✅ تم اعاده تشغيل موسيقى تليثون**")
+    await loli.edit("**✅ تم اعاده تشغيل سورس دارك**")
     os.execl(sys.executable, sys.executable, *sys.argv)
     quit()
 @Client.on_message(filters.user(SUDO_USERS) & filters.command(["اوامر"], prefixes=f"{HNDLR}"))
@@ -44,7 +44,7 @@ async def help(client, m: Message):
     HELP = f"""
 <b>👋 اهلا {m.from_user.mention}!
 
-𝘰𝘳𝘥𝘦𝘳𝘴 𝘮𝘶𝘴𝘪𝘤 𝘵𝘦𝘭𝘦𝘵𝘩𝘰𝘯
+NOREY MUSIC @SSSC2
 ——————×—————
 
 ⧉ | لتشغيل صوتية في المكالمة أرسل ⇦ [ `{HNDLR}تشغيل  + اسم الاغنية` ]
@@ -60,7 +60,7 @@ async def help(client, m: Message):
 ⧉ | لتحميل فيديو  ⇦  [ `{HNDLR}تحميل_فيديو + اسم الاغنية او الرابط` ]
 ———————×———————
 
-⧉ | لأعاده تشغيل التنصيب أرسل ⇦  [ `{HNDLR}ريستارت` ]
+⧉ | لأعاده تشغيل السورس أرسل ⇦  [ `{HNDLR}ريستارت` ]
 ———————×———————
 🛠 """
     await m.reply(HELP)
@@ -69,7 +69,7 @@ async def repo(client, m: Message):
     await m.delete()
     REPO = f"""
 <b>👋  اهلا {m.from_user.mention}!
-🎶 هذا ميوزك العرب @TelethonMusic
-- للمطور : @LLL5L
+🎶 هذا سورس دارك @QQQBE
+- للمطور : @SSSC2
 """
     await m.reply(REPO, disable_web_page_preview=True)
