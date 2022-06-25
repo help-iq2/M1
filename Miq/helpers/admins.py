@@ -1,7 +1,7 @@
 from typing import List
 from pyrogram.types import Chat
-from MusicTelethon.helpers.get_admins import get as gett
-from MusicTelethon.helpers.get_admins import set
+from Miq.helpers.get_admins import get as gett
+from Miq.helpers.get_admins import set
 async def get_administrators(chat: Chat) -> List[int]:
     get = gett(chat.id)
 
