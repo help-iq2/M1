@@ -7,7 +7,9 @@ aiofiles
 asyncio
 wget
 python-arq
-youtube-search-python
+youtube_dl
+youtube_search_python
+youtube_search
 yt-dlp
 python-dotenv
 gTTS
