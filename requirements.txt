@@ -1,6 +1,6 @@
 TgCrypto
 pyrogram==1.4.16
-py-tgcalls
+py-tgcalls==0.8.3
 requests
 aiohttp
 aiofiles
@@ -8,8 +8,7 @@ asyncio
 wget
 python-arq
 youtube_dl
-youtube_search_python
-youtube_search
+youtube-search-python==1.4.6
 yt-dlp
 python-dotenv
 gTTS
