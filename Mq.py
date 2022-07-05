@@ -5,7 +5,7 @@ from Miq.التشغيل import arq
 async def main():
     await call_py.start()
     print("""    ------------------
-   | ميوزك تليثون الان شغال ! |
+   | تليثون القرآن الان شغال ! |
     ------------------"""    )
     await idle()
     await arq.close()
