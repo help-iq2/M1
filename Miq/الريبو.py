@@ -37,7 +37,7 @@ async def restart(client, m: Message):
     await loli.edit("**✅ تم اعاده تشغيل تليثون القران**")
     os.execl(sys.executable, sys.executable, *sys.argv)
     quit()
-@Client.on_message(filters.user(SUDO_USERS) & filters.command(["اوامر"], prefixes=f"{HNDLR}"))
+@Client.on_message(filters.user(SUDO_USERS) & filters.command(["اوامر","اوامر القران"], prefixes=f"{HNDLR}"))
 @authorized_users_only
 async def help(client, m: Message):
     await m.delete()
