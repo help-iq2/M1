@@ -21,7 +21,7 @@ async def song(client, message: Message):
     if not urlissed:
         await client.send_message(            message.chat.id,            "صيغة الأمر غير صالحة!",        )
         return
-    pablo = await client.send_message(message.chat.id, f"**🔎 جاري تحميل : @TelethonQuran ** `{urlissed}`")
+    pablo = await client.send_message(message.chat.id, f"**🔎 جاري تحميل : @Mus_3b2 ** `{urlissed}`")
     search = SearchVideos(f"{urlissed}", offset=1, mode="dict", max_results=1)
     mi = search.result()
     mio = mi["search_result"]
