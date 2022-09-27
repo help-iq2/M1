@@ -34,7 +34,7 @@ async def restart(client, m: Message):
     await loli.edit("7")
     await loli.edit("8")
     await loli.edit("9")
-    await loli.edit("**✅ تم اعاده تشغيل تليثون القران**")
+    await loli.edit("**✅ تم اعاده تشغيل تليثون اكين القران**")
     os.execl(sys.executable, sys.executable, *sys.argv)
     quit()
 @Client.on_message(filters.user(SUDO_USERS) & filters.command(["اوامر","اوامر القران"], prefixes=f"{HNDLR}"))
@@ -44,7 +44,7 @@ async def help(client, m: Message):
     HELP = f"""
 <b>👋 اهلا {m.from_user.mention}!
 
-𝘰𝘳𝘥𝘦𝘳𝘴 Telethon Quran
+ 💸 اوامر السورس ب تفصيل 
 ——————×—————
 
 ⧉ | لتشغيل صوتية في المكالمة أرسل ⇦ [ `{HNDLR}تشغيل  + اسم السورة + او الرابط من يوتيوب` ]
@@ -62,15 +62,15 @@ async def help(client, m: Message):
 
 ⧉ | لأعاده تشغيل السورس  ⇦  [ `{HNDLR}ريستارت` ]
 ———————×———————
- مطور تليثون القران : @lll5l
-قناة تليثون القران:  @TelethonQuran"""
+ مطور تليثون القران : @iPiiii
+قناة تليثون القران:  @Mus_3b2"""
     await m.reply(HELP)
 @Client.on_message(filters.command(["الريبو"], prefixes=f"{HNDLR}"))
 async def repo(client, m: Message):
     await m.delete()
     REPO = f"""
 <b>👋  اهلا {m.from_user.mention}!
-- للمطور : @LLL5L
-@TelethonQuran
+- للمطور : @iPiiii
+@Mus_3b2
 """
     await m.reply(REPO, disable_web_page_preview=True)
